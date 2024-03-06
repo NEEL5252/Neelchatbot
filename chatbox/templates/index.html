@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <style>
+      df-messenger {
+       --df-messenger-bot-message: #878fac;
+       --df-messenger-button-titlebar-color: #df9b56;
+       --df-messenger-chat-background-color: #fafafa;
+       --df-messenger-font-color: white;
+       --df-messenger-send-icon: #878fac;
+       --df-messenger-user-message: #479b3d;
+      }
+      df-messenger button{
+        background-color: #479b3d;
+      }
+    </style>
+  </head>
+<body>
+  {% comment %} <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/2fd85f13-a085-423b-9b0d-ef3129887459"></iframe>  {% endcomment %}
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Neel-chat-bot"
+    agent-id="d61ce8ea-7586-4f6e-94d3-665194fdc707"
+    language-code="en"
+  >
+  <button class="bookButton"> {{bookButton}}</button>
+  <button class="orderButton">{{orderbutton}}</button>
+  
+</df-messenger>
+
+  
+</body>
+</html>
