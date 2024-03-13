@@ -1,0 +1,68 @@
+{
+    "responseId": "ffb89fd0-6785-494f-9e18-553f2f4c47de-e9bf988c",
+    "queryResult": {
+        "queryText": "55",
+        "parameters": {
+            "number": 55.0
+        },
+        "allRequiredParamsPresent": true,
+        "fulfillmentText": "Your order with order Id 55 has been dispatched.",
+        "fulfillmentMessages": [
+            {
+                "text": {
+                    "text": [
+                        "Your order with order Id 55 has been dispatched."
+                    ]
+                }
+            }
+        ],
+        "outputContexts": [
+            {
+                "name": "projects/neel-chat-bot-dcpf/agent/sessions/dfMessenger-62277396/contexts/track-order",
+                "lifespanCount": 5,
+                "parameters": {
+                    "number": 55.0,
+                    "number.original": "55",
+                    "total-items": [
+                        "coco"
+                    ],
+                    "total-items.original": [
+                        "cold coco"
+                    ]
+                }
+            },
+            {
+                "name": "projects/neel-chat-bot-dcpf/agent/sessions/dfMessenger-62277396/contexts/new-order",
+                "parameters": {
+                    "number": 55.0,
+                    "number.original": "55",
+                    "total-items": [
+                        "coco"
+                    ],
+                    "total-items.original": [
+                        "cold coco"
+                    ]
+                }
+            },
+            {
+                "name": "projects/neel-chat-bot-dcpf/agent/sessions/dfMessenger-62277396/contexts/__system_counters__",
+                "parameters": {
+                    "no-input": 0.0,
+                    "no-match": 0.0,
+                    "number": 55.0,
+                    "number.original": "55"
+                }
+            }
+        ],
+        "intent": {
+            "name": "projects/neel-chat-bot-dcpf/agent/intents/5d728076-9a93-410c-83f0-e2120011ee04",
+            "displayName": "tracking-order:context:track-order"
+        },
+        "intentDetectionConfidence": 1.0,
+        "languageCode": "en"
+    },
+    "originalDetectIntentRequest": {
+        "payload": {}
+    },
+    "session": "projects/neel-chat-bot-dcpf/agent/sessions/dfMessenger-62277396"
+}

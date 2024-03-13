@@ -14,12 +14,20 @@ def add_order(request):
         data = json.loads(request.body)
         responseId = data.get('responseId')
         # print(data)
-        intent = data.get('queryResult').get('intent')['displayName']
 
-        if intent == 'new-order':
+        #  Store json data in file
+        with open("chatbox\\Untitled-1.json", "w") as f:
+            json.dump(data, f)
+
+
+        intent = data.get('queryResult').get('intent')['displayName']
+        queryText = data.get('queryResult')['queryText']
+        # if intent == "Hello":
+        #     pass
+        if intent == 'new-order' or queryText == "new-order":
             get, create = new_user.objects.get_or_create(responseId = responseId)
             response = {
-                "fulfillmentText" : "Ready to take new order!"
+                "fulfillmentText" : "Hurrehhh, we are ready to take order you can order anything from the below menu:\n\n pavbhaji\n panipuri\n samosa\n cold coco\n mango lassi\n thick sake!!"
             }
             global user
             user = get
@@ -69,7 +77,7 @@ def add_order(request):
                 quantity = data.get('queryResult').get('parameters')['number']
 
                 ordertodelete = new_order.objects.get(user = user, quantity = quantity[0])
-                print(ordertodelete)
+                # print(ordertodelete)
                 if not ordertodelete:
                     response = {
                         "fulfillmentText" : f"No any order has been found order Id {user.id}!!! Restart Again"
