@@ -6,16 +6,18 @@
     <title>ChatBot</title>
     <style>
       df-messenger {
-       --df-messenger-bot-message: #878fac;
-       --df-messenger-button-titlebar-color: #df9b56;
-       --df-messenger-chat-background-color: #fafafa;
+       --df-messenger-bot-message: #003f3f;
+       --df-messenger-button-titlebar-color: #31473A;
+       --df-messenger-chat-background-color: #EDF4F2;
        --df-messenger-font-color: white;
-       --df-messenger-send-icon: #878fac;
-       --df-messenger-user-message: #479b3d;
+       --df-messenger-send-icon: #ADEFD1FF;
+       --df-messenger-user-message: #00203FFF;
+       --df-messenger-input-box-color: #00203FFF;
+       --df-messenger-input-font-color: #ADEFD1FF;
       }
-      df-messenger button{
+      {% comment %} df-messenger button{
         background-color: #479b3d;
-      }
+      } {% endcomment %}
     </style>
   </head>
 <body>
@@ -28,9 +30,6 @@
     agent-id="d61ce8ea-7586-4f6e-94d3-665194fdc707"
     language-code="en"
   >
-  <button class="bookButton"> {{bookButton}}</button>
-  <button class="orderButton">{{orderbutton}}</button>
-  
 </df-messenger>
 
   

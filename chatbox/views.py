@@ -16,8 +16,8 @@ def add_order(request):
         # print(data)
 
         #  Store json data in file
-        with open("chatbox\\Untitled-1.json", "w") as f:
-            json.dump(data, f)
+        # with open("chatbox\\Untitled-1.json", "w") as f:
+        #     json.dump(data, f)
 
 
         intent = data.get('queryResult').get('intent')['displayName']
